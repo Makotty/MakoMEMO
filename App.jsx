@@ -1,16 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import AppBar from './src/componets/AppBar';
+
 export default function App() {
   return (
     <View style={styles.container}>
 
-      <View style={styles.appbar}>
-        <View style={styles.appbarInnner}>
-          <Text style={styles.appbarTitle}>Mako MEMO APP</Text>
-          <Text style={styles.appbarLogout}>LogOut</Text>
-        </View>
-      </View>
+      <AppBar />
 
       <View>
 
@@ -68,30 +65,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#dcdcdc',
-  },
-  appbar: {
-    width: '100%',
-    height: 104,
-    backgroundColor: 'white',
-    borderBottomWidth: 2,
-    borderColor: 'lime',
-    justifyContent: 'flex-end',
-  },
-  appbarTitle: {
-    marginBottom: 8,
-    fontSize: 22,
-    lineHeight: 32,
-    color: 'lime',
-    fontWeight: 'bold',
-  },
-  appbarInnner: {
-    alignItems: 'center',
-  },
-  appbarLogout: {
-    position: 'absolute',
-    right: 19,
-    bottom: 14,
-    color: 'rgba(0,255,0,0.7)',
   },
   memoListItem: {
     backgroundColor: 'white',
