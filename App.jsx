@@ -13,7 +13,7 @@ export default function App() {
 
       <MemoListItem />
 
-      <NewMemoButton />
+      <NewMemoButton>+</NewMemoButton>
 
     </View>
   );

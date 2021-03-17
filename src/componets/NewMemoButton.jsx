@@ -2,14 +2,20 @@
 
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { string } from 'prop-types';
 
-export default function NewMemoButton() {
+export default function NewMemoButton(props) {
+  const { children } = props;
   return (
     <View style={styles.newMemoButton}>
-      <Text style={styles.newMemoPlus}>+</Text>
+      <Text style={styles.newMemoPlus}>{ children }</Text>
     </View>
   );
 }
+
+NewMemoButton.propTypes = {
+  children: string.isRequired,
+};
 
 const styles = StyleSheet.create({
   newMemoButton: {
