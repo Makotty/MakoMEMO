@@ -17,36 +17,6 @@ export default function MemoListItem() {
         </View>
       </View>
 
-      <View style={styles.memoListItem}>
-        <View>
-          <Text style={styles.memoListItemTitle}>買い物リスト</Text>
-          <Text style={styles.memoListItemDate}>2020/03/05 05:25</Text>
-        </View>
-        <View>
-          <Text>X</Text>
-        </View>
-      </View>
-
-      <View style={styles.memoListItem}>
-        <View>
-          <Text style={styles.memoListItemTitle}>買い物リスト</Text>
-          <Text style={styles.memoListItemDate}>2020/03/05 05:25</Text>
-        </View>
-        <View>
-          <Text>X</Text>
-        </View>
-      </View>
-
-      <View style={styles.memoListItem}>
-        <View>
-          <Text style={styles.memoListItemTitle}>買い物リスト</Text>
-          <Text style={styles.memoListItemDate}>2020/03/05 05:25</Text>
-        </View>
-        <View>
-          <Text>X</Text>
-        </View>
-      </View>
-
     </View>
   );
 }
