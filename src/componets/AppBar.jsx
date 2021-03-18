@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 104,
     backgroundColor: 'white',
-    borderBottomWidth: 2,
+    borderBottomWidth: 5,
     borderColor: 'lime',
     justifyContent: 'flex-end',
   },

@@ -2,26 +2,29 @@
 
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { string } from 'prop-types';
+import { string, shape } from 'prop-types';
 
-export default function NewMemoButton(props) {
-  const { children } = props;
+export default function CircleButton(props) {
+  const { children, style } = props;
   return (
-    <View style={styles.circleButton}>
+    <View style={[styles.circleButton, style]}>
       <Text style={styles.circleButtonLabel}>{ children }</Text>
     </View>
   );
 }
 
-NewMemoButton.propTypes = {
+CircleButton.propTypes = {
   children: string.isRequired,
+  style: shape(),
+};
+
+CircleButton.defaultProps = {
+  style: null,
 };
 
 const styles = StyleSheet.create({
   circleButton: {
-    backgroundColor: 'white',
-    borderWidth: 1,
-    borderColor: 'lime',
+    backgroundColor: 'lime',
     width: 70,
     height: 70,
     borderRadius: 35,
@@ -36,7 +39,7 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
   },
   circleButtonLabel: {
-    color: 'lime',
+    color: 'white',
     fontSize: 40,
     lineHeight: 40,
   },
