@@ -5,7 +5,7 @@ import { StyleSheet, View } from 'react-native';
 
 import AppBar from '../componets/AppBar';
 import MemoListItem from '../componets/MemoListItem';
-import NewMemoButton from '../componets/NewMemoButton';
+import CircleButton from '../componets/CircleButton';
 
 export default function MemoListScreen() {
   return (
@@ -15,7 +15,7 @@ export default function MemoListScreen() {
 
       <MemoListItem />
 
-      <NewMemoButton>+</NewMemoButton>
+      <CircleButton>+</CircleButton>
 
     </View>
   );

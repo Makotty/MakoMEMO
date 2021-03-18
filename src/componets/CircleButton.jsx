@@ -7,8 +7,8 @@ import { string } from 'prop-types';
 export default function NewMemoButton(props) {
   const { children } = props;
   return (
-    <View style={styles.newMemoButton}>
-      <Text style={styles.newMemoPlus}>{ children }</Text>
+    <View style={styles.circleButton}>
+      <Text style={styles.circleButtonLabel}>{ children }</Text>
     </View>
   );
 }
@@ -18,7 +18,7 @@ NewMemoButton.propTypes = {
 };
 
 const styles = StyleSheet.create({
-  newMemoButton: {
+  circleButton: {
     backgroundColor: 'white',
     borderWidth: 1,
     borderColor: 'lime',
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 8,
   },
-  newMemoPlus: {
+  circleButtonLabel: {
     color: 'lime',
     fontSize: 40,
     lineHeight: 40,
