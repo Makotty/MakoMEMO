@@ -1,7 +1,7 @@
 /* eslint-disable linebreak-style */
 
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
 export default function MemoListItem() {
