@@ -1,7 +1,12 @@
 /* eslint-disable linebreak-style */
 
 import React from 'react';
-import { View, Text, ScrollView, StyleSheet } from 'react-native';
+import {
+  View,
+  Text,
+  ScrollView,
+  StyleSheet,
+} from 'react-native';
 
 import AppBar from '../componets/AppBar';
 import CircleButton from '../componets/CircleButton';
@@ -25,7 +30,7 @@ export default function MemoDetailScreen() {
         </Text>
       </ScrollView>
 
-      <CircleButton style={styles.memoEditButton}>+</CircleButton>
+      <CircleButton style={styles.memoEditButton} name="edit" />
 
     </View>
   );
