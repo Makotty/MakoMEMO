@@ -1,5 +1,3 @@
-/* eslint-disable linebreak-style */
-
 import React from 'react';
 import {
   View,
@@ -7,14 +5,12 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import AppBar from '../componets/AppBar';
 import CircleButton from '../componets/CircleButton';
 import KeyboadSafeView from '../componets/KeyboadSafeView';
 
 export default function MemoCreateScreen() {
   return (
     <KeyboadSafeView style={styles.container}>
-      <AppBar />
 
       <View style={styles.inputContainer}>
         <TextInput value="" multiline style={styles.input} />

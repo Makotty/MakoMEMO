@@ -1,5 +1,3 @@
-/* eslint-disable linebreak-style */
-
 import React from 'react';
 import {
   View,
@@ -9,13 +7,12 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import AppBar from '../componets/AppBar';
 import Button from '../componets/Button';
 
 export default function SignUpScreen() {
   return (
     <View style={styles.container}>
-      <AppBar />
+
       <View style={styles.inner}>
         <Text style={styles.title}>Sign Up</Text>
         <TextInput style={styles.input} value="Email Address" />

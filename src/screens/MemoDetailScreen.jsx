@@ -1,5 +1,3 @@
-/* eslint-disable linebreak-style */
-
 import React from 'react';
 import {
   View,
@@ -8,14 +6,13 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import AppBar from '../componets/AppBar';
 import CircleButton from '../componets/CircleButton';
 
-export default function MemoDetailScreen() {
+export default function MemoDetailScreen(props) {
+  const { navigation } = props;
+
   return (
     <View style={styles.container}>
-
-      <AppBar />
 
       <View style={styles.memoTitleHeader}>
         <Text style={styles.memoTitle}>買い物リスト</Text>
@@ -30,7 +27,11 @@ export default function MemoDetailScreen() {
         </Text>
       </ScrollView>
 
-      <CircleButton style={styles.memoEditButton} name="edit" />
+      <CircleButton
+        style={styles.memoEditButton}
+        name="edit"
+        onPress={() => { navigation.navigate('MemoEdit'); }}
+      />
 
     </View>
   );
@@ -70,7 +71,7 @@ const styles = StyleSheet.create({
     lineHeight: 24,
   },
   memoEditButton: {
-    top: 160,
+    top: 58.5,
     bottom: 'auto',
   },
 });

@@ -1,5 +1,3 @@
-/* eslint-disable linebreak-style */
-
 import React from 'react';
 import {
   View,
@@ -7,14 +5,12 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import AppBar from '../componets/AppBar';
 import CircleButton from '../componets/CircleButton';
 import KeyboadSafeView from '../componets/KeyboadSafeView';
 
 export default function MemoEditScreen() {
   return (
     <KeyboadSafeView style={styles.container}>
-      <AppBar />
 
       <View style={styles.inputContainer}>
         <TextInput value="買い物リスト" multiline style={styles.input} />
@@ -27,6 +23,7 @@ export default function MemoEditScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: 'white',
   },
   inputContainer: {
     flex: 1,
