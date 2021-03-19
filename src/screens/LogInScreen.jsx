@@ -31,7 +31,14 @@ export default function LogInScreen(props) {
 
         <View style={styles.footer}>
           <Text style={styles.footerText}>アカウントをお持ちではありませんか？</Text>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.reset({
+                index: 0,
+                routes: [{ name: 'SignUp' }],
+              });
+            }}
+          >
             <Text style={styles.footerLink}>Sign UP</Text>
           </TouchableOpacity>
         </View>

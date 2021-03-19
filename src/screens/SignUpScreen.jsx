@@ -25,13 +25,20 @@ export default function SignUpScreen(props) {
             navigation.reset({
               index: 0,
               routes: [{ name: 'MemoList' }],
-          });
-         }}
+            });
+          }}
         />
 
         <View style={styles.footer}>
           <Text style={styles.footerText}>アカウントをお持ちですか？</Text>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.reset({
+                index: 0,
+                routes: [{ name: 'LogIn' }],
+              });
+            }}
+          >
             <Text style={styles.footerLink}>Log In</Text>
           </TouchableOpacity>
         </View>
