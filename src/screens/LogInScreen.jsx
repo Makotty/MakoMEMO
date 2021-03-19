@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 
 import AppBar from '../componets/AppBar';
+import Button from '../componets/Button';
 
 export default function LogInScreen() {
   return (
@@ -18,9 +19,9 @@ export default function LogInScreen() {
         <Text style={styles.title}>Log In</Text>
         <TextInput style={styles.input} value="Email Address" />
         <TextInput style={styles.input} value="Password" />
-        <View style={styles.buttonContainer}>
-          <Text style={styles.buttonLabel}>LOG IN</Text>
-        </View>
+
+        <Button label="LOG IN" />
+
         <View style={styles.footer}>
           <Text style={styles.footerText}>アカウントをお持ちではありませんか？</Text>
           <Text style={styles.footerLink}>Sign UP</Text>
@@ -55,19 +56,6 @@ const styles = StyleSheet.create({
     marginBottom: 25,
     borderRadius: 24,
     color: 'rgba(0,0,0,0.3)',
-  },
-  buttonContainer: {
-    backgroundColor: 'lime',
-    borderRadius: 9999,
-    alignSelf: 'center',
-    marginBottom: 24,
-  },
-  buttonLabel: {
-    fontSize: 16,
-    lineHeight: 32,
-    paddingVertical: 8,
-    paddingHorizontal: 100,
-    color: 'white',
   },
   footer: {
     flexDirection: 'row',
