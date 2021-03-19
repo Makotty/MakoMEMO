@@ -8,14 +8,18 @@ import {
 import CircleButton from '../componets/CircleButton';
 import KeyboadSafeView from '../componets/KeyboadSafeView';
 
-export default function MemoEditScreen() {
+export default function MemoEditScreen(props) {
+  const { navigation } = props;
   return (
     <KeyboadSafeView style={styles.container}>
 
       <View style={styles.inputContainer}>
         <TextInput value="買い物リスト" multiline style={styles.input} />
       </View>
-      <CircleButton name="check" />
+      <CircleButton
+        name="check"
+        onPress={() => { navigation.goBack(); }}
+      />
     </KeyboadSafeView>
   );
 }
