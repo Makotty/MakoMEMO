@@ -19,7 +19,7 @@ export default function App() {
         screenOptions={{
           headerStyle: { backgroundColor: 'lime' },
           headerTitleStyle: { color: 'white' },
-          headerTitle: 'MakoMEMO',
+          headerTitle: 'Mako MEMO',
           headerTintColor: "white",
           headerBackTitle: 'Back'
         }}

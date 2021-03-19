@@ -21,7 +21,12 @@ export default function SignUpScreen(props) {
 
         <Button
           label="SIGN UP"
-          onPress={() => { navigation.navigate('MemoList') }}
+          onPress={() => {
+            navigation.reset({
+              index: 0,
+              routes: [{ name: 'MemoList' }],
+          });
+         }}
         />
 
         <View style={styles.footer}>

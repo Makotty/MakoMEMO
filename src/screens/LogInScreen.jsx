@@ -21,7 +21,12 @@ export default function LogInScreen(props) {
 
         <Button
           label="LOG IN"
-          onPress={() => { navigation.navigate('MemoList') }}
+          onPress={() => {
+            navigation.reset({
+              index: 0,
+              routes: [{ name: 'MemoList' }],
+            });
+          }}
         />
 
         <View style={styles.footer}>
