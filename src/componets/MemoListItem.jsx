@@ -1,7 +1,12 @@
 /* eslint-disable linebreak-style */
 
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import {
+  View,
+  TouchableOpacity,
+  Text,
+  StyleSheet,
+} from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
 export default function MemoListItem() {
@@ -13,9 +18,9 @@ export default function MemoListItem() {
           <Text style={styles.memoListItemTitle}>買い物リスト</Text>
           <Text style={styles.memoListItemDate}>2020/03/05 05:25</Text>
         </View>
-        <View>
+        <TouchableOpacity>
           <Feather name="x" size={16} color="#B0B0B0" />
-        </View>
+        </TouchableOpacity>
       </View>
 
     </View>

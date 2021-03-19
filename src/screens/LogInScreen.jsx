@@ -3,6 +3,7 @@
 import React from 'react';
 import {
   View,
+  TouchableOpacity,
   Text,
   TextInput,
   StyleSheet,
@@ -24,7 +25,9 @@ export default function LogInScreen() {
 
         <View style={styles.footer}>
           <Text style={styles.footerText}>アカウントをお持ちではありませんか？</Text>
-          <Text style={styles.footerLink}>Sign UP</Text>
+          <TouchableOpacity>
+            <Text style={styles.footerLink}>Sign UP</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
