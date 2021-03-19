@@ -9,7 +9,8 @@ import {
 
 import Button from '../componets/Button';
 
-export default function SignUpScreen() {
+export default function SignUpScreen(props) {
+  const { navigation } = props;
   return (
     <View style={styles.container}>
 
@@ -18,7 +19,10 @@ export default function SignUpScreen() {
         <TextInput style={styles.input} value="Email Address" />
         <TextInput style={styles.input} value="Password" />
 
-        <Button label="SIGN UP" />
+        <Button
+          label="SIGN UP"
+          onPress={() => { navigation.navigate('MemoList') }}
+        />
 
         <View style={styles.footer}>
           <Text style={styles.footerText}>アカウントをお持ちですか？</Text>
