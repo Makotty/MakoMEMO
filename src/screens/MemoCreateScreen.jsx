@@ -27,6 +27,7 @@ export default function MemoCreateScreen(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: 'white',
   },
   inputContainer: {
     flex: 1,
