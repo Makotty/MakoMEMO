@@ -58,7 +58,7 @@ export default function LogInScreen(props) {
               });
             }}
           >
-            <Text style={styles.footerLink}>Sign UP</Text>
+            <Text style={styles.footerLink}>Sign Up</Text>
           </TouchableOpacity>
         </View>
       </View>
