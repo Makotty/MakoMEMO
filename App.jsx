@@ -11,16 +11,10 @@ import MemoCreateScreen from './src/screens/MemoCreateScreen';
 import LogInScreen from './src/screens/LogInScreen';
 import SignUpScreen from './src/screens/SignUpScreen';
 
+import { firebaseConfig } from './env';
+
 const Stack = createStackNavigator();
 
-const firebaseConfig = {
-  apiKey: 'AIzaSyCSROILPrN55J1WNWdY9QB-nROJI-Epe5o',
-  authDomain: 'makomemo-bc7ed.firebaseapp.com',
-  projectId: 'makomemo-bc7ed',
-  storageBucket: 'makomemo-bc7ed.appspot.com',
-  messagingSenderId: '159136225440',
-  appId: '1:159136225440:web:c2b27829b69db0952c51c5',
-};
 if (firebase.apps.length === 0){
   firebase.initializeApp(firebaseConfig);
 }

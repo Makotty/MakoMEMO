@@ -23,7 +23,7 @@ export default function SignUpScreen(props) {
       console.log(user.uid);
       navigation.reset({
         index: 0,
-        routes: [{ name: 'MemoList' }],
+        routes: [{ name: 'LogIn' }],
       });
     })
     .catch((error) => {
