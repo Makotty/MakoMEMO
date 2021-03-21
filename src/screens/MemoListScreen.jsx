@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Alert } from 'react-native';
 import firebase from 'firebase';
 
 import MemoListItem from '../componets/MemoListItem';
@@ -24,6 +24,9 @@ export default function MemoListScreen(props) {
         snapshot.forEach((doc) => {
           console.log(doc.id, doc.data());
         });
+      }, (error) => {
+        console.log(error);
+        Alert.alert('データの読み込みに失敗しました');
       });
     }
     return unsubscribe;
