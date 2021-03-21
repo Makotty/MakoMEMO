@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { StyleSheet, View } from 'react-native';
+import firebase from 'firebase';
 
 import MemoListItem from '../componets/MemoListItem';
 import CircleButton from '../componets/CircleButton';
@@ -12,6 +13,19 @@ export default function MemoListScreen(props) {
       headerRight: () => <LogOutButton />,
     });
   }, []);
+
+  useEffect(() => {
+    const db = firebase.firestore();
+    const { currentUser } = firebase.auth();
+    const ref = db.collection(`users/${currentUser.uid}/memos`);
+    const unsubscribe = ref.onSnapshot((snapshot) => {
+      snapshot.forEach((doc) => {
+        console.log(doc.id, doc.data());
+      });
+    });
+    return unsubscribe;
+  }, []);
+
   return (
     <View style={styles.container}>
 
