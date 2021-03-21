@@ -5,11 +5,29 @@ import {
   StyleSheet,
 } from 'react-native';
 
+import firebase from 'firebase';
+
 import CircleButton from '../componets/CircleButton';
 import KeyboadSafeView from '../componets/KeyboadSafeView';
 
 export default function MemoCreateScreen(props) {
   const { navigation } = props;
+
+  function handlePress() {
+    const db = firebase.firestore();
+    const ref = db.collection('memos');
+    ref.add({
+      bodyText:'Hello',
+    })
+      .then((docRef) => {
+        console.log('Created!', docRef.id);
+        navigation.goBack();
+      })
+      .catch((error) => {
+        console.log('Error!', error);
+      });
+  }
+
   return (
     <KeyboadSafeView style={styles.container}>
 
@@ -18,7 +36,7 @@ export default function MemoCreateScreen(props) {
       </View>
       <CircleButton
         name="check"
-        onPress={() => { navigation.goBack(); }}
+        onPress={handlePress}
       />
     </KeyboadSafeView>
   );
