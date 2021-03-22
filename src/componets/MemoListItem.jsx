@@ -7,35 +7,49 @@ import {
   Text,
   StyleSheet,
   Alert,
+  FlatList,
 } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/core';
-import { shape, string, instanceOf, arrayOf } from 'prop-types';
+import {
+  shape,
+  string,
+  instanceOf,
+  arrayOf
+} from 'prop-types';
 
 export default function MemoListItem(props) {
   const { memos } = props;
   const navigation = useNavigation();
+
+  function renderItem({ item }){
+    return (
+      <TouchableOpacity
+        style={styles.memoListItem}
+        onPress={() => { navigation.navigate('MemoDetail') }}
+      >
+        <View>
+          <Text style={styles.memoListItemTitle} numberOfLines={1}>{item.bodyText}</Text>
+          <Text style={styles.memoListItemDate}>{String(item.updatedAt)}</Text>
+        </View>
+        <TouchableOpacity
+          style={styles.memoDelete}
+          onPress={() =>{ Alert.alert('Are you Sure?') }}
+        >
+          <Feather name="x" size={16} color="#B0B0B0" />
+        </TouchableOpacity>
+      </TouchableOpacity>
+    )
+  }
+
   return (
     <View>
 
-      {memos.map((memo) => (
-        <TouchableOpacity
-          key={memo.id}
-          style={styles.memoListItem}
-          onPress={() => { navigation.navigate('MemoDetail') }}
-        >
-          <View>
-            <Text style={styles.memoListItemTitle}>{memo.bodyText}</Text>
-            <Text style={styles.memoListItemDate}>{String(memo.updatedAt)}</Text>
-          </View>
-          <TouchableOpacity
-            style={styles.memoDelete}
-            onPress={() =>{ Alert.alert('Are you Sure?') }}
-          >
-            <Feather name="x" size={16} color="#B0B0B0" />
-          </TouchableOpacity>
-        </TouchableOpacity>
-      ))}
+      <FlatList
+        data={memos}
+        renderItem={renderItem}
+        keyExtractor={(item) => item.id}
+      />
 
     </View>
   );
