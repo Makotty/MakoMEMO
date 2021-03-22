@@ -26,7 +26,7 @@ export default function MemoListItem(props) {
     return (
       <TouchableOpacity
         style={styles.memoListItem}
-        onPress={() => { navigation.navigate('MemoDetail') }}
+        onPress={() => { navigation.navigate('MemoDetail', { id: item.id }); }}
       >
         <View>
           <Text style={styles.memoListItemTitle} numberOfLines={1}>{item.bodyText}</Text>
