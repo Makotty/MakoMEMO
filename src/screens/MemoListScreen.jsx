@@ -9,7 +9,7 @@ import LogOutButton from '../componets/LogOutButton';
 export default function MemoListScreen(props) {
   const { navigation } = props;
   const [memos, setMemos] = useState([]);
-    useEffect(() => {
+  useEffect(() => {
     navigation.setOptions({
       headerRight: () => <LogOutButton />,
     });
@@ -44,7 +44,7 @@ export default function MemoListScreen(props) {
   return (
     <View style={styles.container}>
 
-      <MemoListItem memos={memos}/>
+      <MemoListItem memos={memos} />
 
       <CircleButton
         name="plus"

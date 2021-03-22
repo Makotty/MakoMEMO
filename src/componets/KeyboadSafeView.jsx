@@ -1,5 +1,3 @@
-/* eslint-disable linebreak-style */
-
 import React, { useRef, useState, useEffect } from 'react';
 import {
   Keyboard, Dimensions, Animated, ViewPropTypes,

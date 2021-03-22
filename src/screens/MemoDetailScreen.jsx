@@ -1,4 +1,4 @@
-import React,{ useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   View,
   Text,
@@ -9,6 +9,7 @@ import { shape, string } from 'prop-types';
 import firebase from 'firebase';
 
 import CircleButton from '../componets/CircleButton';
+import { dateToString } from '../utils';
 
 export default function MemoDetailScreen(props) {
   const { navigation, route } = props;
@@ -40,7 +41,7 @@ export default function MemoDetailScreen(props) {
 
       <View style={styles.memoTitleHeader}>
         <Text style={styles.memoTitle} numberOfLines={1}>{memo && memo.bodyText}</Text>
-        <Text style={styles.memoDate}>{memo && String(memo.updatedAt)}</Text>
+        <Text style={styles.memoDate}>{memo && dateToString(memo.updatedAt)}</Text>
       </View>
 
       <ScrollView style={styles.memoBody}>
@@ -61,9 +62,9 @@ export default function MemoDetailScreen(props) {
 
 MemoDetailScreen.propTypes = {
   route: shape({
-    params: shape({ id: string })
+    params: shape({ id: string }),
   }).isRequired,
-}
+};
 
 const styles = StyleSheet.create({
   container: {

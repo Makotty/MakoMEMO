@@ -1,4 +1,4 @@
-/* eslint-disable linebreak-style */
+/* eslint-disable import/no-extraneous-dependencies */
 
 import React from 'react';
 import {
@@ -15,14 +15,15 @@ import {
   shape,
   string,
   instanceOf,
-  arrayOf
+  arrayOf,
 } from 'prop-types';
+import { dateToString } from '../utils';
 
 export default function MemoListItem(props) {
   const { memos } = props;
   const navigation = useNavigation();
 
-  function renderItem({ item }){
+  function renderItem({ item }) {
     return (
       <TouchableOpacity
         style={styles.memoListItem}
@@ -30,16 +31,16 @@ export default function MemoListItem(props) {
       >
         <View>
           <Text style={styles.memoListItemTitle} numberOfLines={1}>{item.bodyText}</Text>
-          <Text style={styles.memoListItemDate}>{String(item.updatedAt)}</Text>
+          <Text style={styles.memoListItemDate}>{dateToString(item.updatedAt)}</Text>
         </View>
         <TouchableOpacity
           style={styles.memoDelete}
-          onPress={() =>{ Alert.alert('Are you Sure?') }}
+          onPress={() => { Alert.alert('Are you Sure?'); }}
         >
           <Feather name="x" size={16} color="#B0B0B0" />
         </TouchableOpacity>
       </TouchableOpacity>
-    )
+    );
   }
 
   return (

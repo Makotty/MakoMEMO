@@ -1,5 +1,3 @@
-/* eslint-disable linebreak-style */
-
 import React from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
 import { string, shape, func } from 'prop-types';

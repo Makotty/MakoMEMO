@@ -1,8 +1,8 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/stack';
 import firebase from 'firebase';
-
 
 import MemoListScreen from './src/screens/MemoListScreen';
 import MemoDetailScreen from './src/screens/MemoDetailScreen';
@@ -15,7 +15,7 @@ import { firebaseConfig } from './env';
 
 require('firebase/firestore');
 
-if (firebase.apps.length === 0){
+if (firebase.apps.length === 0) {
   firebase.initializeApp(firebaseConfig);
 }
 
@@ -30,7 +30,7 @@ export default function App() {
           headerStyle: { backgroundColor: 'lime' },
           headerTitleStyle: { color: 'white' },
           headerTitle: 'Mako MEMO',
-          headerTintColor: "white",
+          headerTintColor: 'white',
           headerBackTitle: 'Back',
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
           gestureEnabled: true,

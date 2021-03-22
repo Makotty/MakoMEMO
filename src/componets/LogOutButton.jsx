@@ -1,3 +1,5 @@
+/* eslint-disable linebreak-style */
+
 import React from 'react';
 import {
   TouchableOpacity,
@@ -10,19 +12,19 @@ import { useNavigation } from '@react-navigation/native';
 
 export default function LogOutButton() {
   const navigation = useNavigation();
-  function handlePress(){
+  function handlePress() {
     firebase.auth().signOut()
-    .then(() => {
-      navigation.reset({
-        index: 0,
-        routes: [{ name: 'LogIn' }],
+      .then(() => {
+        navigation.reset({
+          index: 0,
+          routes: [{ name: 'LogIn' }],
+        });
+      })
+      .catch(() => {
+        Alert.alert('ログアウトに失敗しました');
       });
-    })
-    .catch(() => {
-      Alert.alert('ログアウトに失敗しました');
-    });
   }
-  return(
+  return (
     <TouchableOpacity onPress={handlePress} style={styles.container}>
       <Text style={styles.label}>ログアウト</Text>
     </TouchableOpacity>
@@ -38,4 +40,4 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: 'white',
   },
-})
+});
