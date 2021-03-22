@@ -1,0 +1,8 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Datasource local storage ignored files
+/../../../../../../../../:\OWN\Udemy\ReactNative\2021年版 React Native, Firebase, Expo でアプリ開発をゼロから始めよう！\Dev\MakoMEMO\.idea/dataSources/
+/dataSources.local.xml
+# エディターベースの HTTP クライアントリクエスト
+/httpRequests/
