@@ -53,7 +53,7 @@ export default function MemoDetailScreen(props) {
       <CircleButton
         style={styles.memoEditButton}
         name="edit"
-        onPress={() => { navigation.navigate('MemoEdit'); }}
+        onPress={() => { navigation.navigate('MemoEdit', { id: memo.id, bodyText: memo.bodyText }); }}
       />
 
     </View>
