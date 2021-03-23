@@ -11,10 +11,12 @@ import MemoListItem from '../componets/MemoListItem';
 import CircleButton from '../componets/CircleButton';
 import LogOutButton from '../componets/LogOutButton';
 import Button from '../componets/Button';
+import Loading from '../componets/Loading';
 
 export default function MemoListScreen(props) {
   const { navigation } = props;
   const [memos, setMemos] = useState([]);
+  const [isLoading, setLoading] = useState(false);
   useEffect(() => {
     navigation.setOptions({
       headerRight: () => <LogOutButton />,
@@ -26,6 +28,7 @@ export default function MemoListScreen(props) {
     const { currentUser } = firebase.auth();
     let unsubscribe = () => {};
     if (currentUser) {
+      setLoading(true);
       const ref = db.collection(`users/${currentUser.uid}/memos`).orderBy('updatedAt', 'desc');
       unsubscribe = ref.onSnapshot((snapshot) => {
         const userMemos = [];
@@ -39,8 +42,10 @@ export default function MemoListScreen(props) {
           });
         });
         setMemos(userMemos);
+        setLoading(false);
       }, (error) => {
         console.log(error);
+        setLoading(false);
         Alert.alert('データの読み込みに失敗しました');
       });
     }
@@ -50,6 +55,7 @@ export default function MemoListScreen(props) {
   if (memos.length === 0) {
     return (
       <View style={emptyStyles.container}>
+        <Loading isLoading={isLoading} />
         <View style={emptyStyles.inner}>
           <Text style={emptyStyles.title}>メモがありません。作成してください(⌒∇⌒)</Text>
           <Button
