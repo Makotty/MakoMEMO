@@ -18,14 +18,14 @@ const styles = StyleSheet.create({
     height: 104,
     backgroundColor: 'white',
     borderBottomWidth: 5,
-    borderColor: 'lime',
+    borderColor: 'skyblue',
     justifyContent: 'flex-end',
   },
   appbarTitle: {
     marginBottom: 8,
     fontSize: 22,
     lineHeight: 32,
-    color: 'lime',
+    color: 'skyblue',
     fontWeight: 'bold',
   },
   appbarInnner: {

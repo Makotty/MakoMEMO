@@ -74,14 +74,14 @@ const styles = StyleSheet.create({
   memoTitleHeader: {
     backgroundColor: 'white',
     borderBottomWidth: 3,
-    borderColor: 'lime',
+    borderColor: 'skyblue',
     height: 96,
     justifyContent: 'center',
     paddingVertical: 24,
     paddingHorizontal: 19,
   },
   memoTitle: {
-    color: 'lime',
+    color: 'skyblue',
     fontSize: 20,
     lineHeight: 32,
     fontWeight: 'bold',

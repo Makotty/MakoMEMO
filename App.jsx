@@ -29,7 +29,7 @@ export default function App() {
       <Stack.Navigator
         initialRouteName="LogIn"
         screenOptions={{
-          headerStyle: { backgroundColor: 'lime' },
+          headerStyle: { backgroundColor: 'skyblue' },
           headerTitleStyle: { color: 'white' },
           headerTitle: 'Mako MEMO',
           headerTintColor: 'white',

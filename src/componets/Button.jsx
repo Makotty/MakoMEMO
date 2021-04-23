@@ -28,7 +28,7 @@ Button.defaultProps = {
 
 const styles = StyleSheet.create({
   buttonContainer: {
-    backgroundColor: 'lime',
+    backgroundColor: 'skyblue',
     borderRadius: 9999,
     alignSelf: 'center',
     marginBottom: 24,

@@ -101,7 +101,7 @@ export default function LogInScreen(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#e6ffe6',
+    backgroundColor: 'lightcyan',
   },
   inner: {
     paddingVertical: 27,
@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
   input: {
     fontSize: 15,
     height: 48,
-    borderColor: 'lime',
+    borderColor: 'skyblue',
     borderWidth: 0.25,
     backgroundColor: 'white',
     paddingHorizontal: 24,
@@ -134,6 +134,6 @@ const styles = StyleSheet.create({
   footerLink: {
     fontSize: 18,
     lineHeight: 24,
-    color: 'lime',
+    color: 'skyblue',
   },
 });

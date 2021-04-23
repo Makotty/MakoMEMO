@@ -44,7 +44,6 @@ export default function MemoListScreen(props) {
         setLoading(false);
       }, () => {
         setLoading(false);
-        Alert.alert('データの読み込みに失敗しました');
       });
     }
     return unsubscribe;
@@ -83,7 +82,7 @@ export default function MemoListScreen(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#e6ffe6',
+    backgroundColor: 'lightsteelblue',
   },
 });
 

@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 19,
     alignItems: 'center',
     borderBottomWidth: 0.4,
-    borderColor: 'rgba(0,255,0,0.7)',
+    borderColor: 'royalblue',
   },
   memoInner: {
     flex: 1,

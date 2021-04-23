@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
   input: {
     fontSize: 15,
     height: 48,
-    borderColor: 'lime',
+    borderColor: 'skyblue',
     borderWidth: 0.25,
     backgroundColor: 'white',
     paddingHorizontal: 24,
@@ -114,6 +114,6 @@ const styles = StyleSheet.create({
   footerLink: {
     fontSize: 18,
     lineHeight: 24,
-    color: 'lime',
+    color: 'skyblue',
   },
 });
