@@ -7,7 +7,7 @@ import {
   StyleSheet,
   Alert,
 } from 'react-native';
-import firebase from 'firebase';
+import firebase from 'firebase/compat/app';
 import { useNavigation } from '@react-navigation/native';
 
 export default function LogOutButton() {

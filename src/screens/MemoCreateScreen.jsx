@@ -6,7 +6,7 @@ import {
   Alert,
 } from 'react-native';
 
-import firebase from 'firebase';
+import firebase from 'firebase/compat/app';
 
 import CircleButton from '../componets/CircleButton';
 import KeyboadSafeView from '../componets/KeyboadSafeView';

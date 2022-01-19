@@ -7,7 +7,7 @@ import {
   StyleSheet,
   Alert,
 } from 'react-native';
-import firebase from 'firebase';
+import firebase from 'firebase/compat/app';
 
 import Button from '../componets/Button';
 import { translateErrors } from '../utils';

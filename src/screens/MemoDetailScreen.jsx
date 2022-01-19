@@ -6,7 +6,7 @@ import {
   StyleSheet,
 } from 'react-native';
 import { shape, string } from 'prop-types';
-import firebase from 'firebase';
+import firebase from 'firebase/compat/app';
 
 import CircleButton from '../componets/CircleButton';
 import { dateToString } from '../utils';

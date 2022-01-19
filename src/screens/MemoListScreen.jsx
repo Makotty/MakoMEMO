@@ -5,7 +5,7 @@ import {
   Text,
   Alert,
 } from 'react-native';
-import firebase from 'firebase';
+import firebase from 'firebase/compat/app';
 
 import MemoListItem from '../componets/MemoListItem';
 import CircleButton from '../componets/CircleButton';
